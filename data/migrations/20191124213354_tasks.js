@@ -13,7 +13,7 @@ exports.up = function(knex) {
       .notNullable()
       .references("id")
       .inTable("projects")
-      .onDelete("CASCADE")
+      .onDelete("RESTRICT")
       .onUpdate("CASCADE");
   });
 };
