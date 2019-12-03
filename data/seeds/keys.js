@@ -1,4 +1,4 @@
-export function seed(knex) {
+exports.seed = function seed(knex) {
   // Deletes ALL existing entries
   return knex("projects_resources")
     .del()
@@ -13,4 +13,4 @@ export function seed(knex) {
         { project_id: 2, resource_id: 3 }
       ]);
     });
-}
+};
