@@ -52,7 +52,7 @@ function update(id, changes) {
 }
 
 function remove(id) {
-  return db("projects")
+  return db("products")
     .where("id", id)
     .del();
 }

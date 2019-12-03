@@ -92,8 +92,8 @@ router.post("/:id/tasks", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   Projects.remove(req.params.id)
-    .then(count => {
-      if (count > 0) {
+    .then(project => {
+      if (project > 0) {
         res.status(200).json({ message: "The project has been removed" });
       } else {
         res.status(404).json({ message: "The project could not be found" });
